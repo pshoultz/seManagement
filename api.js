@@ -1,8 +1,9 @@
 var express = require('express')
 var app = express()
 
-app.get('/hello', function (req, res) {
-  res.send('hello world')
+
+app.get('/', function (req, res) {
+  res.send('/ route')
 })
 
-app.listen("80");
+app.listen(8080);
