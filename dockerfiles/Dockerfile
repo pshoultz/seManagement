@@ -7,6 +7,6 @@ RUN apk add nodejs
 RUN git clone https://github.com/pshoultz/seManagement.git
 WORKDIR /app/seManagement/
 RUN npm install express --save
-CMD ["node", "api.js &"]
-EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]
+CMD ["node", "api.js"]
+EXPOSE 8080
