@@ -3,9 +3,9 @@ RUN apk update
 RUN apk add git
 RUN apk add npm
 RUN apk add nodejs
-WORKDIR /user/share/nginx/html
+WORKDIR /user/share/nginx/html/seManagement
 RUN git clone https://github.com/pshoultz/seManagement.git
-EXPOSE 80
+EXPOSE 8080
 RUN npm install express --save
 CMD ["node", "api.js", "&"]
 CMD ["nginx", "-g", "daemon off;"]
