@@ -8,6 +8,6 @@ RUN git clone https://github.com/pshoultz/seManagement.git
 WORKDIR /app/seManagement/
 RUN npm install express --save
 RUN npm install fs --save
-CMD ["node", "api.js"]
 CMD ["nginx", "-g", "daemon off;"]
+CMD ["node", "api.js"]
 EXPOSE 8080
