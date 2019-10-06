@@ -24,6 +24,7 @@ app.get('/logs', function (req, res) {
     console.log(contents);
     res.writeHead(200, {'Content-Type': 'text/html'});
     res.write(contents);
+    //res.end();
 })
 
 
