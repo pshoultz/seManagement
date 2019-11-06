@@ -1,0 +1,5 @@
+GET,/version,200
+GET,/getMenu,200
+GET,/logs,200
+GET,/version,200
+GET,/logs,200

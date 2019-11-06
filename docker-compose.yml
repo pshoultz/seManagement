@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+    api:
+        image: img-sem-api
+        ports: 
+            - 8080:8080
+        volumes:
+            - /var/lib/docker/volumes/db:/app
