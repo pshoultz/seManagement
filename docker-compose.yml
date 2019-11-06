@@ -7,7 +7,6 @@ services:
             - 8080:8080
         volumes:
             - db:/app
-
     monitoring:
         image: img-sem-monitoring
         ports:

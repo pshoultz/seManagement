@@ -29,7 +29,7 @@ app.get('/logs', function (req, res) {
 
 app.get('/getMenu', function(req,res){
     res.send({
-        "hotdong":20,
+        "hotdog":20,
         "hamburger":35,
         "soda":4,
         "cookie":6
