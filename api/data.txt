@@ -52,3 +52,5 @@ POST,/purchase/cookie/123,200
 POST,/purchase/cookie/123,200
 POST,/purchase/cookie/123,200
 POST,/purchase/cookie/4444,200
+POST,/purchase/cookie/4444,200
+POST,/purchase/cookie/99,200
