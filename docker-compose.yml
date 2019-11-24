@@ -15,5 +15,15 @@ services:
         volumes:
             - db:/app
 
+    fake-user:
+        image: img-sem-fakeuser
+        ports:
+            - 8082:8082
+
+    fake-inventory:
+        image: img-sem-fakeinventory
+        ports:
+            - 8081:8081
+
 volumes:
     db:

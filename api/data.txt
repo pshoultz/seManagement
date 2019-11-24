@@ -39,3 +39,16 @@ GET,/purchase/cookie/12,200
 POST,/purchase/soda/111,200
 POST,/purchase/cookie/12,200
 POST,/purchase/cookie/420,200
+POST,/purchase/cookie/420,200
+POST,/purchase/cookie/420,200
+POST,/purchase/cookie/420,200
+POST,/purchase/cookie/420,200
+POST,/purchase/cookie/420,200
+POST,/purchase/cookie/420,200
+POST,/purchase/cookie/420,200
+POST,/purchase/cookie/420,200
+POST,/purchase/cookie/420,200
+POST,/purchase/cookie/123,200
+POST,/purchase/cookie/123,200
+POST,/purchase/cookie/123,200
+POST,/purchase/cookie/4444,200
