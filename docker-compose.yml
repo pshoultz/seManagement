@@ -23,7 +23,7 @@ services:
     fake-inventory:
         image: img-sem-fakeinventory
         ports:
-            - 8081:8081
+            - 8083:8083
 
 volumes:
     db:

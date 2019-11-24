@@ -43,7 +43,7 @@ app.post('/purchase/:item/:quantity', function(req,res){
     console.log(req.params);
     var options = {
         hostname:"127.0.0.1",
-        port:8081,
+        port:8083,
         path:"/setcount/" + item + "/" + quantity,
         method:'POST',
         headers: {
