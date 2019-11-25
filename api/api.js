@@ -5,8 +5,7 @@ const http = require('http');
 
 const PORT = 8080;
 //const HOST = "127.0.0.1";
-//const HOST = "0.0.0.0";
-const HOST = "api";
+const HOST = "0.0.0.0";
 
 //NOTE : logger for telemetry
 app.use(function (req, res, next){

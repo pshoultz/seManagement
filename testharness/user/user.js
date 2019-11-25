@@ -4,8 +4,7 @@ const http = require('http');
 
 const PORT = 8082;
 //const HOST = "127.0.0.1";
-//const HOST = "0.0.0.0";
-const HOST = "user";
+const HOST = "0.0.0.0";
 
 app.get('/', function(req,res){
     res.send(200);
@@ -36,6 +35,7 @@ app.get('/user/:item/:quantity', function(request, response){
         console.log(e.message);
         response.send(500);
     });
+
     req.end();
 });
 

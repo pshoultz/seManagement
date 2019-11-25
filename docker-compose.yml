@@ -9,11 +9,11 @@ services:
             - db:/app
 
     monitoring:
-            image: img-sem-monitoring
-            ports:
-                - 8081:8081
-            volumes:
-                - db:/app
+        image: img-sem-monitoring
+        ports:
+            - 8081:8081
+        volumes:
+            - db:/app
 
     user:
         image: img-sem-fakeuser
