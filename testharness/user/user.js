@@ -4,7 +4,8 @@ const http = require('http');
 
 const PORT = 8082;
 //const HOST = "127.0.0.1";
-const HOST = "0.0.0.0";
+//const HOST = "0.0.0.0";
+const HOST = "user";
 
 app.get('/', function(req,res){
     res.send(200);

@@ -2,7 +2,8 @@ var express = require('express');
 var app = express();
 
 const PORT = 8083;
-const HOST = "0.0.0.0";
+//const HOST = "0.0.0.0";
+const HOST = "inventory";
 
 var hotdog = 200;
 var hamburger = 250;
