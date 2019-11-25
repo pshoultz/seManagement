@@ -1,10 +1,12 @@
 var express = require('express');
 var app = express();
 var fs = require('fs');
-var http = require('http');
+const http = require('http');
 
 const PORT = 8080;
-const HOST = "0.0.0.0";
+//const HOST = "127.0.0.1";
+//const HOST = "0.0.0.0";
+const HOST = "api";
 
 //NOTE : logger for telemetry
 app.use(function (req, res, next){
@@ -20,14 +22,6 @@ app.get('/version', function (req, res) {
     res.send('this is verison 1 of the hotBurger service' )
 })
 
-//app.get('/logs', function (req, res) {
-//    var contents = fs.readFileSync("./data.txt", 'utf8');
-//    res.writeHead(200, {'Content-Type': 'text/html'});
-//    res.write(contents);
-//    console.log(contents);
-//    res.end();
-//})
-
 app.get('/getMenu', function(req,res){
     res.send({
         "hotdog":20,
@@ -38,11 +32,12 @@ app.get('/getMenu', function(req,res){
 });
 
 app.post('/purchase/:item/:quantity', function(request,response){
+
     var item = request.params.item;
     var quantity = request.params.quantity;
     var options = {
-        //hostname:"http://inventory",
-        hostname:"127.0.0.1",
+        hostname:"http://inventory",
+        //hostname:"127.0.0.1",
         port:8083,
         path:"/setcount/" + item + "/" + quantity,
         method:'POST'
@@ -61,7 +56,6 @@ app.post('/purchase/:item/:quantity', function(request,response){
         response.send(500);
     });
     req.end();
-
 });
 
 console.log("api.js running... on port " + PORT);

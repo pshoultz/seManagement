@@ -3,20 +3,24 @@ var app = express();
 const http = require('http');
 
 const PORT = 8082;
+//const HOST = "127.0.0.1";
 const HOST = "0.0.0.0";
+
+app.get('/', function(req,res){
+    res.send(200);
+});
 
 app.get('/user/:item/:quantity', function(request, response){
     var tries = 0;
     var item = request.params.item;
     var quantity = request.params.quantity;
-    //var attempts = parseInt(req.params.attempts);
 
     var options = {
-        //hostname:"http://api",
-        hostname:"127.0.0.1",
+        hostname:"http://api",
+        //hostname:"127.0.0.1",
         port:8080,
         path:"/purchase/" + item + "/" + quantity,
-        method:'POST',
+        method:'POST'
     };
 
     var req = http.request(options, function(res){

@@ -62,3 +62,6 @@ POST,/purchase/cookie/1111,200
 POST,/purchase/cookie/1111,200
 POST,/purchase/cookie/1111,200
 POST,/purchase/cookie/9999,200
+POST,/purchase/cookie/9999,200
+POST,/purchase/cookie/1111,200
+POST,/purchase/cookie/1111,200
