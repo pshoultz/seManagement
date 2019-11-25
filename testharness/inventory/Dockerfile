@@ -1,4 +1,4 @@
-FROM nginx:1.16.0-alpine
+FROM 1.16.0-alpine
 WORKDIR /app
 COPY . .
 RUN apk update
