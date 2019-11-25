@@ -37,10 +37,9 @@ app.get('/getMenu', function(req,res){
     });
 });
 
-app.post('/purchase/:item/:quantity', function(req,res){
-    var item = req.params.item;
-    var quantity = req.params.quantity;
-    console.log(req.params);
+app.post('/purchase/:item/:quantity', function(request,response){
+    var item = request.params.item;
+    var quantity = request.params.quantity;
     var options = {
         //hostname:"http://inventory",
         hostname:"127.0.0.1",
@@ -53,13 +52,13 @@ app.post('/purchase/:item/:quantity', function(req,res){
         console.log("making http request...");
         res.on('data', (d) => {
             console.log("request made...");
-            res.send(200);
+            response.send(200);
         });
     });
 
     req.on('error', function(e){
         console.log(e.message);
-        res.send(500);
+        response.send(500);
     });
     req.end();
 

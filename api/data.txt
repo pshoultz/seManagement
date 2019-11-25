@@ -54,3 +54,11 @@ POST,/purchase/cookie/123,200
 POST,/purchase/cookie/4444,200
 POST,/purchase/cookie/4444,200
 POST,/purchase/cookie/99,200
+POST,/purchase/cookie/12,200
+POST,/purchase/cookie/12,200
+POST,/purchase/cookie/1111,200
+POST,/purchase/cookie/1111,200
+POST,/purchase/cookie/1111,200
+POST,/purchase/cookie/1111,200
+POST,/purchase/cookie/1111,200
+POST,/purchase/cookie/9999,200
