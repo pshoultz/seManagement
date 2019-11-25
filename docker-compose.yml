@@ -4,26 +4,26 @@ services:
     api:
         image: img-sem-api
         ports: 
-            - 8080:8080
+            - "8080:8080"
         volumes:
             - db:/app
 
     monitoring:
         image: img-sem-monitoring
         ports:
-            - 8081:8081
+            - "8081:8081"
         volumes:
             - db:/app
 
     user:
         image: img-sem-fakeuser
         ports:
-            - 8082:8082
+            - "8082:8082"
 
     inventory:
         image: img-sem-fakeinventory
         ports:
-            - 8083:8083
+            - "8083:8083"
 
 volumes:
     db:
