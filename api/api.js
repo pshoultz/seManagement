@@ -42,28 +42,27 @@ app.post('/purchase/:item/:quantity', function(req,res){
     var quantity = req.params.quantity;
     console.log(req.params);
     var options = {
+        //hostname:"http://inventory",
         hostname:"127.0.0.1",
         port:8083,
         path:"/setcount/" + item + "/" + quantity,
-        method:'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        }
+        method:'POST'
     };
 
     var req = http.request(options, function(res){
         console.log("making http request...");
         res.on('data', (d) => {
             console.log("request made...");
+            res.send(200);
         });
     });
 
     req.on('error', function(e){
         console.log(e.message);
+        res.send(500);
     });
     req.end();
 
-    res.send(200);
 });
 
 console.log("api.js running... on port " + PORT);
