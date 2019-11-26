@@ -16,8 +16,9 @@ app.get('/user/:item/:quantity', function(request, response){
     var quantity = request.params.quantity;
 
     var options = {
-        hostname:"http://api",
+        hostname:"con-sem-api",
         //hostname:"127.0.0.1",
+        //hostname:"http://api",
         port:8080,
         path:"/purchase/" + item + "/" + quantity,
         method:'POST'
@@ -32,7 +33,7 @@ app.get('/user/:item/:quantity', function(request, response){
     });
 
     req.on('error', function(e){
-        console.log(e.message);
+        console.log("user.js:: ",e.message);
         response.send(500);
     });
 

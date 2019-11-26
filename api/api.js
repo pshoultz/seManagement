@@ -35,7 +35,8 @@ app.post('/purchase/:item/:quantity', function(request,response){
     var item = request.params.item;
     var quantity = request.params.quantity;
     var options = {
-        hostname:"http://inventory",
+        hostname:"con-sem-inventory",
+        //hostname:"http://inventory",
         //hostname:"127.0.0.1",
         port:8083,
         path:"/setcount/" + item + "/" + quantity,
@@ -51,7 +52,7 @@ app.post('/purchase/:item/:quantity', function(request,response){
     });
 
     req.on('error', function(e){
-        console.log(e.message);
+        console.log("api.js:: ", e.message);
         response.send(500);
     });
     req.end();
